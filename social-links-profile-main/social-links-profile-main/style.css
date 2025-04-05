@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+
+  /*COLORS*/
+  --cl-green: hsl(75, 94%, 57%);
+  --cl-white: hsl(0, 0%, 100%);
+
+  --cl-grey-700: hsl(0, 0%, 20%);
+  --cl-grey-800: hsl(0, 0%, 12%);
+  --cl-grey-900: hsl(0, 0%, 8%);
+
+  /*FONT*/
+  --fs-body: 14px;
+
+  --ff-body: "Inter";
+
+  --fw-light: 400;
+  --fw-medium: 600;
+  --fw-heavy: 700;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  text-align: center;
+  font-size: var(--fs-body);
+  
+  background-color: var(--cl-grey-900);
+  
+  color: var(--cl-white);
+  font-family: var(--ff-body);
+
+}
+
+.container {
+  max-width: 1440px;
+  height: 100%;
+
+  margin-inline: auto;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.BIG-container {
+  background-color: var(--cl-grey-800);
+
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: .8rem;
+
+  padding: 2.3rem;
+
+}
+
+.client-headshot {
+  width: 5.5rem;
+  height: 5.5rem;
+
+  margin-bottom: 1.5rem;
+  
+}
+
+.client-headshot img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+
+}
+
+.name-and-location {
+  margin-bottom: 2rem;
+
+}
+
+.name-and-location h1 {
+  font-size: 24px;
+  font-weight: var(--fw-medium);
+
+  margin-bottom: .4rem;
+
+}
+
+.name-and-location h2 {
+  font-size: 14px;
+  color: var(--cl-green);
+
+}
+
+.client-synopsis {
+  margin-bottom: 1.5rem;
+
+}
+
+.hot-links {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem
+
+}
+
+.hotlink {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-heavy);
+  color: var(--cl-white);
+
+  width: 19rem;
+
+  padding: 1rem 0rem;
+
+  background-color: var(--cl-grey-700);
+  border: none;
+
+  border-radius: .5rem;
+
+  cursor: pointer;
+  transition: all ease 0.15s;
+
+}
+
+.hotlink:hover {
+  color: var(--cl-grey-900);
+
+  background-color: var(--cl-green);
+
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 375px) {
+  .BIG-container {
+    padding: 2.1rem 1rem;
+
+  }
+
+  .hot-links {
+    width: 18rem;
+
+  }
+
+  .hotlink {
+    padding: .8rem 0rem;
+  }
+
+}
